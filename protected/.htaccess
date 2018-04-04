@@ -1,0 +1,18 @@
+#Forward all non-existent files/directories to Yii
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*) index.php/$1 [QSA,L]
+
+RewriteEngine on
+#LOCAL
+RewriteBase /
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+# otherwise forward it to index.php
+RewriteRule . /index.php
+
+AddDefaultCharset utf-8
