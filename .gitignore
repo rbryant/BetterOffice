@@ -1,7 +1,13 @@
+framework/*
 assets/*
 !assets/.gitignore
 protected/runtime/*
 !protected/runtime/.gitignore
 protected/data/*.db
-themes/classic/views/
-framework/*
+themes/*
+/nbproject/*
+/dhtmlx/*
+/css/*
+.settings/*
+.buildpath
+.project
